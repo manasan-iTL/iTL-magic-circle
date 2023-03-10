@@ -24,3 +24,38 @@ html {
 .image {
     width: 100%;
 }
+
+/*
+    メインビジュアル
+*/
+
+.header {
+    position: relative;
+}
+
+.h-mainvisual img {
+    width: 100%;
+}
+
+.h-float-area {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    z-index: 100;
+}
+
+.h-float-area.active {
+    position: fixed;
+}
+
+.h-heading {
+    font-size: 8rem;
+    text-align: center;
+    flex-grow: 1;
+}
