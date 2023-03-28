@@ -1,0 +1,44 @@
+/* ハンバーガーメニューとフォントの件は後回し！ */
+
+body {
+    color: #FFFFFF;
+    /* font-family: Serif; */
+    background-color: #1E1E1E;
+}
+
+h1 {
+    font-size: 110px;
+    text-align: center;
+    margin: 100px;
+}
+
+.img {
+    width: 50%;
+}
+
+img {
+    width: 100%;
+}
+
+.text {
+    padding: 50px;
+    text-align: center;
+}
+
+p {
+    font-size: 32px;
+}
+
+
+
+.wrapper_1, .wrapper_2, .wrapper_3 {
+    display: flex;
+}
+
+.op {
+    text-align: center;
+}
+
+.wrapper_1 {
+    width: 100%;
+}
