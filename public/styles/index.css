@@ -291,15 +291,17 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 50px;
+    row-gap: 65px;
+    column-gap: 30px;
 }
 
 .s-comming-soon {
-    width: 20%;
+    min-width: 200px;
 }
 
 .s-comming-soon_text {
     margin-top: 1em;
-    font-size: 2.5em;
+    font-size: 2em;
     text-align: center;
 }
 
@@ -346,6 +348,10 @@ html {
     .h-heading {
         font-size: 4em;
     }
+
+    .h-humbergar {
+        margin-top: 10px;
+    }
 }
 
 /*
@@ -368,6 +374,10 @@ html {
 */
 
 @media screen and (max-width: 1080px) {
+
+    .s-about {
+        padding-right: 0px;
+    }
 
     .s-about-text-box {
         align-items: center;
@@ -423,10 +433,6 @@ html {
 */
 
 @media screen and (max-width: 1080px) {
-
-    .s-comming-soons {
-        justify-content: space-between;
-    }
 
     .s-heading_underline--soon {
         font-size: 2.25em;
