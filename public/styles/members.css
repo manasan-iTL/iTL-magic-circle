@@ -1,0 +1,171 @@
+
+.members-container {
+    padding: 40px 20px 0px;
+}
+
+.h-container {
+    display: flex;
+}
+
+.h-heading {
+    font-size: 3rem;
+    color: white;
+    text-align: left;
+    padding-left: 100px;
+}
+
+.h-humbergar {
+    margin: 0 0 0 auto;
+}
+
+
+.slide-area {
+    padding: 30px 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.arrow-left > img, .arrow-right > img {
+    cursor: pointer;
+}
+
+.arrow-right {
+    transform: rotate(180deg)
+}
+
+.slides-container {
+    flex: 1;
+}
+
+.slides {
+    padding: 20px;
+    border-bottom: 3px solid #626041;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    row-gap: 10px;
+}
+
+.slide-name {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+.member-area {
+    padding: 30px 100px;
+}
+
+.member-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 80px;
+}
+
+.member-introduce {
+    font-size: 2em;
+    text-align: center;
+}
+
+.member-name, .member-hobby {
+    margin-bottom: 50px;
+}
+
+.name-label, .hobby-label, .phrase-label {
+    text-decoration: underline 1px white;
+}
+
+/*
+    スライダーのロジック用
+*/
+
+.disactive {
+    display: none;
+}
+
+.move-to-left {
+    transform: translateX(500px);
+}
+
+.move-to-right {
+    transform: translateX(-500px);
+}
+
+
+@media screen and (max-width: 1080px) {
+    .h-heading {
+        padding-left: 40px;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+    .slide-area {
+        padding: 30px 0 30px 40px;
+    }
+
+    .member-area {
+        padding: 30px 40px;
+    }
+
+    .member-container {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    .member-name, .member-hobby {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 550px) {
+    .h-heading, .slide-area {
+        padding-left: 0px;
+    }
+
+    .arrow-left, .arrow-right {
+        width: 50px;
+    }
+
+    .arrow-left > img, .arrow-right > img {
+        width: 100%;
+    }
+
+
+    .slides {
+        padding: 20px 0;
+    }
+
+    .member-area {
+        padding: 30px 0;
+    }
+
+    .member-container {
+        padding: 0;
+    }
+
+    .member-image {
+        width: 150px;
+    }
+
+    .member-image > img {
+        width: 100%;
+    }
+
+    .member-introduce {
+        font-size: 1em;
+    }
+}
