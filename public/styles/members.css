@@ -93,6 +93,11 @@
     display: none;
 }
 
+.disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .move-to-left {
     transform: translateX(500px);
 }
