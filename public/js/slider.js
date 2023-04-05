@@ -78,13 +78,13 @@ const checkDisableSliderItem = (PREFIX) => {
         return
     }
 
-    if (isTablet && currentBeginIndex >= LIMIT_SLIDER_ITEM_TABLET - 1) {
-        return
-    }
+    // if (isTablet && count_introduce >= LIMIT_SLIDER_ITEM_TABLET - 1) {
+    //     return
+    // }
 
-    if (isSp && currentBeginIndex >= LIMIT_SLIDER_ITEM_SP - 1) {
-        return
-    }
+    // if (isSp && count_introduce >= LIMIT_SLIDER_ITEM_SP - 1) {
+    //     return
+    // }
 
     if (PREFIX === "ADD") {
         console.log(currentBeginIndex, currentEndIndex, count_introduce)
@@ -146,28 +146,30 @@ const calcIndex = (PREFIX) => {
         return
     }
 
-    if (isTablet && count_introduce - 1 >= LIMIT_SLIDER_ITEM_TABLET - 1) {
-        if (PREFIX === "ADD") {
-            count_introduce++
-        } else {
-            count_introduce--
-        }
-        return
-    }
+    // if (isTablet && count_introduce - 1 >= LIMIT_SLIDER_ITEM_TABLET - 1) {
+    //     if (PREFIX === "ADD") {
+    //         count_introduce++
+    //     } else {
+    //         count_introduce--
+    //     }
+    //     return
+    // }
 
-    if (isSp && count_introduce - 1 >= LIMIT_SLIDER_ITEM_SP - 1) {
-        if (PREFIX === "ADD") {
-            count_introduce++
-        } else {
-            count_introduce--
-        }
-        return
-    }
+    // if (isSp && count_introduce - 1 >= LIMIT_SLIDER_ITEM_SP - 1) {
+    //     if (PREFIX === "ADD") {
+    //         count_introduce++
+    //     } else {
+    //         count_introduce--
+    //     }
+    //     return
+    // }
 
     if (PREFIX === "ADD") {
 
         count_introduce++
-        if (currentBeginIndex >= 3 && count_introduce <= 2) return 
+        if (isPc && currentBeginIndex >= 3 && count_introduce <= 2) return 
+        // if (isTablet && currentBeginIndex >= 3 && count_introduce <= 2) return 
+        // if (isPc && currentBeginIndex >= 3 && count_introduce <= 2) return 
         console.log("koko実行") 
         currentBeginIndex = currentBeginIndex + 1
         if (currentEndIndex == items.length - 1) {
