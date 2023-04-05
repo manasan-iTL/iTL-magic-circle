@@ -1,12 +1,310 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/members.css">
+    <script src="./js/hamburger-menu.js" defer></script>
+    <script src="./js/slider.js" defer></script>
+    <title>メンバー紹介ページ</title>
 </head>
 <body>
-    
+    <div class="mask"></div>
+    <div class="members-container">
+        <header class="header">
+            <div class="h-humbergar" id="hamburger-trigger">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="h-nav-area">
+                <h2 class="h-nav-heading heading">iTL Magic Circle</h2>
+                <nav class="h-global-menu">
+                    <ul class="global-nav">
+                        <li class="nav-item">
+                            <a href="./about.html" class="h-global-menu-text text">
+                                About us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./members.html" class="h-global-menu-text text">
+                                Members
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="h-global-menu-text text">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="h-global-menu-text text">
+                                Gallery
+                            </a> 
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="h-global-menu-text text">
+                                Link
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="h-global-menu-text text">
+                                Members-only
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="h-nav-contact-area">
+                    <p class="text">
+                        Contact
+                    </p>
+                    <a href="https://twitter.com/iTL57989039" class="anchor-box">
+                        <img src="./images/Twitter-logo-blue.png" alt="Twitter">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h1 class="h-heading heading">Members</h1>
+            <section class="slide-area">
+                <div class="arrow-left" id="js-arrow-left">
+                    <img src="./images/material-symbols_arrow-back-ios-new.png" alt="">
+                </div>
+                <div class="slides-container">
+                    <ul class="slides">
+                        <li class="slide">
+                            <div class="slide-image">
+                                <img src="./images/members/MIYA_icon.png" alt="" class="image">
+                            </div>
+                            <p class="text slide-name">MIYA</p>
+                        </li>
+                        <li class="slide">
+                            <div class="slide-image">
+                                <img src="./images/members/J・トミー_icon.png" alt="" class="image">
+                            </div>
+                            <p class="text slide-name">J・トミー</p>
+                        </li>
+                        <li class="slide">
+                            <div class="slide-image">
+                                <img src="./images/members/KANA_icon.png" alt="" class="image">
+                            </div>
+                            <p class="text slide-name">KANA</p>
+                        </li>
+                        <li class="slide">
+                            <div class="slide-image">
+                                <img src="./images/members/Yuto_icon.png" alt="" class="image">
+                            </div>
+                            <p class="text slide-name">Yuto</p>
+                        </li>
+                        <li class="slide">
+                            <div class="slide-image">
+                                <img src="./images/members/なる_icon.png" alt="" class="image">
+                            </div>
+                            <p class="text slide-name">なる</p>
+                        </li>
+                        <li class="slide">
+                            <div class="slide-image">
+                                <img src="./images/members/HINA_icon.png" alt="" class="image">
+                            </div>
+                            <p class="text slide-name">HINA</p>
+                        </li>
+                        <li class="slide">
+                            <div class="slide-image">
+                                <img src="./images/members/Tak_icon.png" alt="" class="image">
+                            </div>
+                            <p class="text slide-name">Tak</p>
+                        </li>
+                        <li class="slide">
+                            <div class="slide-image">
+                                <img src="./images/members/橋本葵(かんなちゃん)_icon.png" alt="" class="image">
+                            </div>
+                            <p class="text slide-name">かんなちゃん</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="arrow-right" id="js-arrow-right">
+                    <img src="./images/material-symbols_arrow-back-ios-new.png" alt="">
+                </div>
+            </section>
+            <section class="member-area">
+                <div class="member-container">
+                    <div class="member-image">
+                        <img src="./images/members/MIYA_icon.png" alt="">
+                    </div>
+                    <div class="member-introduce">
+                        <dl class="member-name">
+                            <dt class="text name-label">名前</dt>
+                            <dd class="text name-value">MIYA</dd>
+                        </dl>
+                        <dl class="member-hobby">
+                            <dt class="text hobby-label">趣味</dt>
+                            <dd class="text hobby-value">マジック・芸術・散歩</dd>
+                        </dl>
+                        <dl class="member-phrase">
+                            <dt class="text phrase-label">ひとこと</dt>
+                            <dd class="text phrase-value">
+                                iTLマジックサークル創設者&代表です🐈‍⬛<br>
+                                一緒に不思議な現象起こしましょう！♤♧♢♡
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="member-container disactive">
+                    <div class="member-image">
+                        <img src="./images/members/J・トミー_icon.png" alt="">
+                    </div>
+                    <div class="member-introduce">
+                        <dl class="member-name">
+                            <dt class="text name-label">名前</dt>
+                            <dd class="text name-value">J・トミー</dd>
+                        </dl>
+                        <dl class="member-hobby">
+                            <dt class="text hobby-label">趣味</dt>
+                            <dd class="text hobby-value">マジック、読書、料理、人狼</dd>
+                        </dl>
+                        <dl class="member-phrase">
+                            <dt class="text phrase-label">ひとこと</dt>
+                            <dd class="text phrase-value">
+                                副代表です。マジックでも人狼でも人を騙すのが趣味です。写真本人です。
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="member-container disactive">
+                    <div class="member-image">
+                        <img src="./images/members/KANA_icon.png" alt="">
+                    </div>
+                    <div class="member-introduce">
+                        <dl class="member-name">
+                            <dt class="text name-label">名前</dt>
+                            <dd class="text name-value">KANA</dd>
+                        </dl>
+                        <dl class="member-hobby">
+                            <dt class="text hobby-label">趣味</dt>
+                            <dd class="text hobby-value">読書、散歩</dd>
+                        </dl>
+                        <dl class="member-phrase">
+                            <dt class="text phrase-label">ひとこと</dt>
+                            <dd class="text phrase-value">
+                                主にトランプマジックを練習中です！初心者ですが、楽しく練習しています😊
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="member-container disactive">
+                    <div class="member-image">
+                        <img src="./images/members/Yuto_icon.png" alt="">
+                    </div>
+                    <div class="member-introduce">
+                        <dl class="member-name">
+                            <dt class="text name-label">名前</dt>
+                            <dd class="text name-value">Yuto</dd>
+                        </dl>
+                        <dl class="member-hobby">
+                            <dt class="text hobby-label">趣味</dt>
+                            <dd class="text hobby-value">ピアノ(独学で練習中)</dd>
+                        </dl>
+                        <dl class="member-phrase">
+                            <dt class="text phrase-label">ひとこと</dt>
+                            <dd class="text phrase-value">
+                                マジック最高！
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="member-container disactive">
+                    <div class="member-image">
+                        <img src="./images/members/なる_icon.png" alt="">
+                    </div>
+                    <div class="member-introduce">
+                        <dl class="member-name">
+                            <dt class="text name-label">名前</dt>
+                            <dd class="text name-value">なる</dd>
+                        </dl>
+                        <dl class="member-hobby">
+                            <dt class="text hobby-label">趣味</dt>
+                            <dd class="text hobby-value">散歩、雑貨屋巡り、手芸</dd>
+                        </dl>
+                        <dl class="member-phrase">
+                            <dt class="text phrase-label">ひとこと</dt>
+                            <dd class="text phrase-value">
+                                どなたでも楽しめるのでぜひお越しください！
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="member-container disactive">
+                    <div class="member-image">
+                        <img src="./images/members/HINA_icon.png" alt="">
+                    </div>
+                    <div class="member-introduce">
+                        <dl class="member-name">
+                            <dt class="text name-label">名前</dt>
+                            <dd class="text name-value">HINA</dd>
+                        </dl>
+                        <dl class="member-hobby">
+                            <dt class="text hobby-label">趣味</dt>
+                            <dd class="text hobby-value">グライダー、読書、旅行、マジック</dd>
+                        </dl>
+                        <dl class="member-phrase">
+                            <dt class="text phrase-label">ひとこと</dt>
+                            <dd class="text phrase-value">
+                                サークル活動に頻繁に参加できませんが、マジック大好きです！一緒に楽しみましょう！！
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="member-container disactive">
+                    <div class="member-image">
+                        <img src="./images/members/Tak_icon.png" alt="">
+                    </div>
+                    <div class="member-introduce">
+                        <dl class="member-name">
+                            <dt class="text name-label">名前</dt>
+                            <dd class="text name-value">Tak</dd>
+                        </dl>
+                        <dl class="member-hobby">
+                            <dt class="text hobby-label">趣味</dt>
+                            <dd class="text hobby-value">マジック、映画鑑賞</dd>
+                        </dl>
+                        <dl class="member-phrase">
+                            <dt class="text phrase-label">ひとこと</dt>
+                            <dd class="text phrase-value">
+                                誰でも練習すればマジックできるようになります！一緒に練習しましょう！
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="member-container disactive">
+                    <div class="member-image">
+                        <img src="./images/members/橋本葵(かんなちゃん)_icon.png" alt="">
+                    </div>
+                    <div class="member-introduce">
+                        <dl class="member-name">
+                            <dt class="text name-label">名前</dt>
+                            <dd class="text name-value">橋本葵(かんなちゃん)</dd>
+                        </dl>
+                        <dl class="member-hobby">
+                            <dt class="text hobby-label">趣味</dt>
+                            <dd class="text hobby-value">ボードゲーム、フットサル</dd>
+                        </dl>
+                        <dl class="member-phrase">
+                            <dt class="text phrase-label">ひとこと</dt>
+                            <dd class="text phrase-value">
+                                北海道出身です！よろしくお願いします^^
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="yellow-line line-between"></div>
+        <div class="red-line"></div>
+        <p class="copyright-text text">&copy;2023 ITL Magic Circle : ALL rights reserved.</p>
+    </footer>
 </body>
 </html>
