@@ -1,0 +1,130 @@
+/* ハンバーガーメニューとフォントの件は後回し！ */
+
+body {
+    color: #FFFFFF;
+    background-color: #1E1E1E;
+}
+
+.about_header {
+    font-size: 85px;
+    font-weight: 400;
+    font-family: 'Alegreya', serif;
+    text-align: center;
+    margin: 100px;
+}
+
+.wrapper_1, .wrapper_2, .wrapper_3 {
+    display: flex;
+}
+
+.img_1 {
+    width: 100%;
+}
+
+.img_2 {
+    width: 85%;
+}
+
+.img_3 {
+    width: 115%;
+}
+
+img {
+    width: 100%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Serif JP', serif;
+}
+
+p {
+    text-align: center;
+    font-size: 32px;
+}
+
+.text_1 {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.text_2{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.text_3 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.text_4 {
+    padding-left: 170px;
+    padding-right: 170px;
+    padding-bottom: 15px;
+}
+
+@media screen and (max-width: 1080px) {
+    .about_header {
+        font-size: 65px;
+    }
+
+    .wrapper_1 {
+        flex-direction: column-reverse;
+        row-gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .wrapper_2 {
+        flex-direction: column;
+        row-gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .wrapper_3{
+        flex-direction: column-reverse;
+        row-gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .img_1, .img_2, .img_3 {
+        width: 100%;
+    }
+
+    .img_1 > img, .img_2 > img, .img_3 > img {
+        width: 100%;
+    }
+
+    p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .text {
+        font-size: 30px;
+    }
+
+    .text_4 {
+        margin-top: 0px;
+    }
+
+    .text_1, .text_2, .text_3, .text_4 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .about_header {
+        font-size: 28px;
+        margin: 7px;
+    }
+
+    .text_1, .text_2, .text_3, .text_4 {
+        font-size: 12px;
+    }
+}
