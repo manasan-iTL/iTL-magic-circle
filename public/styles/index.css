@@ -381,6 +381,20 @@ html {
 */
 
 @media screen and (max-width: 1080px) {
+
+    .h-nav-heading {
+        font-size: 4em;
+        text-align: center;
+    }
+
+    .global-nav {
+        text-align: center;
+    }
+
+    .h-nav-contact-area {
+        justify-content: center;
+    }
+
     .h-heading {
         font-size: 4em;
     }
@@ -491,6 +505,11 @@ html {
 @media screen and (max-width: 550px) {
 
     /* ヘッダー */
+
+    .h-nav-heading {
+        font-size: 2.5em;
+        margin-top: 50px;
+    }
 
     .h-heading {
         font-size: 2.5em;
