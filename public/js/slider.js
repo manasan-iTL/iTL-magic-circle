@@ -74,7 +74,9 @@ const disableSliderItem = () => {
 const checkDisableSliderItem = (PREFIX) => {
     const items = document.querySelectorAll(".slide")
 
-    if (isPc && count_introduce >= LIMIT_SLIDER_ITEM_PC - 1 ) {
+    console.log(items.length - LIMIT_SLIDER_ITEM_PC)
+
+    if (isPc && currentBeginIndex >= items.length - LIMIT_SLIDER_ITEM_PC + 1 ) {
         return
     }
 
@@ -137,7 +139,7 @@ const calcIndex = (PREFIX) => {
 
     const items = document.querySelectorAll(".slide")
 
-    if (isPc && count_introduce - 1 >= LIMIT_SLIDER_ITEM_PC - 1) {
+    if (isPc && currentBeginIndex >= items.length - LIMIT_SLIDER_ITEM_PC) {
         if (PREFIX === "ADD") {
             count_introduce++
         } else {
@@ -167,15 +169,17 @@ const calcIndex = (PREFIX) => {
     if (PREFIX === "ADD") {
 
         count_introduce++
-        if (isPc && currentBeginIndex >= 3 && count_introduce <= 2) return 
-        // if (isTablet && currentBeginIndex >= 3 && count_introduce <= 2) return 
-        // if (isPc && currentBeginIndex >= 3 && count_introduce <= 2) return 
+        if (isPc && currentBeginIndex >= items.length - LIMIT_SLIDER_ITEM_PC + 1 ) {
+            return
+        }
         console.log("koko実行") 
         currentBeginIndex = currentBeginIndex + 1
         if (currentEndIndex == items.length - 1) {
             return
         }
         currentEndIndex = currentEndIndex + 1
+
+        console.log(currentBeginIndex, currentEndIndex, count_introduce)
     } else {
 
         count_introduce--
@@ -186,9 +190,13 @@ const calcIndex = (PREFIX) => {
 
         console.log("実行")
 
-        console.log(currentBeginIndex, currentEndIndex)
+        if (isPc && currentBeginIndex >= items.length - LIMIT_SLIDER_ITEM_PC + 1 ) {
+            return
+        }
         currentBeginIndex = currentBeginIndex - 1
         currentEndIndex = currentEndIndex - 1
+
+        console.log(currentBeginIndex, currentEndIndex, count_introduce)
     }
 }
 
