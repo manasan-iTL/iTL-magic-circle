@@ -1,19 +1,9 @@
 
-console.log(window.innerWidth)
-
-// 定数の定義
-const LIMIT_SLIDER_ITEM_PC = 5
-const LIMIT_SLIDER_ITEM_TABLET = 3
-const LIMIT_SLIDER_ITEM_SP = 1
-let currentBeginIndex = 0
-let currentEndIndex = 0
-let isPc = false
-let isTablet = false
-let isSp = false
-let count_introduce = 0
+// DOM要素の取得
 const prevBtn = document.getElementById("js-arrow-left")
 const nextBtn = document.getElementById("js-arrow-right")
 const members_introduce = document.querySelectorAll(".member-container")
+const items = document.querySelectorAll(".slide")
 
 // Sliderを実装するうえで使用する状態を管理するクラス
 
@@ -180,27 +170,15 @@ const calcIndex = (PREFIX) => {
     //     return
     // }
 
-    if (PREFIX === "ADD") {
+/*
 
-        count_introduce++
-        if (isPc && currentBeginIndex >= items.length - LIMIT_SLIDER_ITEM_PC + 1 ) {
-            return
-        }
-        console.log("koko実行") 
-        currentBeginIndex = currentBeginIndex + 1
-        if (currentEndIndex == items.length - 1) {
-            return
-        }
-        currentEndIndex = currentEndIndex + 1
+以下クラスのインスタンス化、関数呼び出しを行う。＝＝コードの本文
 
-        console.log(currentBeginIndex, currentEndIndex, count_introduce)
-    } else {
+*/
 
-        count_introduce--
 
-        if (currentBeginIndex === 0) {
-            return
-        } 
+// SliderStateの初期化
+const slider = new SliderState()
 
         console.log("実行")
 
