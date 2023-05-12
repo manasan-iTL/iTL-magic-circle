@@ -15,69 +15,83 @@ const prevBtn = document.getElementById("js-arrow-left")
 const nextBtn = document.getElementById("js-arrow-right")
 const members_introduce = document.querySelectorAll(".member-container")
 
+// Sliderを実装するうえで使用する状態を管理するクラス
 
-// 要素を非表示にする関数
+class SliderState {
 
-const disableSliderItem = () => {
-    const items = document.querySelectorAll(".slide")
-    console.log(items)
+    LIMIT_SLIDER_ITEM_PC;
+    LIMIT_SLIDER_ITEM_TABLET;
+    LIMIT_SLIDER_ITEM_SP;
 
-    const windowWidth = window.innerWidth
-    console.log(windowWidth)
-    if (windowWidth >= 1080) {
-        console.log("PCサイズ")
+    #limitCountItem;
+    #countClick;
+    #currentBeginIndex;
+    #currentEndIndex;
 
-        isPc = true
+    constructor() {
+        this.LIMIT_SLIDER_ITEM_PC = 5;
+        this.LIMIT_SLIDER_ITEM_TABLET = 3;
+        this.LIMIT_SLIDER_ITEM_SP = 1;
+        this.#limitCountItem = 0;
+        this.#countClick = 0;
+        this.#currentBeginIndex = 0;
+        this.#currentEndIndex = 0;
+    }
 
-        // Indexの計算
-        currentEndIndex = LIMIT_SLIDER_ITEM_PC - 1
+    initState(windowWidth) {
+         // Windows幅による表示要素数の初期化
+         this.#limitCountItem = windowWidth >= 1080 ? this.LIMIT_SLIDER_ITEM_PC: windowWidth > 820 ? this.LIMIT_SLIDER_ITEM_TABLET: this.LIMIT_SLIDER_ITEM_SP
 
-        // 非表示にする
-        for (let i = LIMIT_SLIDER_ITEM_PC - 1; ++i; i < items.length) {
-            if (i == items.length ) return 
-            items[i].classList.toggle("disactive")
-            items[i].classList.toggle("move-to-left")
+        // 表示されているスライダーの最後のインデックス
+        this.#currentEndIndex = this.#limitCountItem - 1
         }
-    } else if (windowWidth > 820) {
-        console.log("タブレットサイズ")
         
-        isTablet = true
+    getLimitCountItem() {
+        return this.#limitCountItem
+    }
         
-        // Indexの計算
-        currentEndIndex = LIMIT_SLIDER_ITEM_TABLET - 1
+    getCountClick() {
+        return this.#countClick
+    }
 
-        // 非表示にする
-        for (let i = LIMIT_SLIDER_ITEM_TABLET - 1; ++i; i < items.length) {
-            if (i == items.length) return 
-            items[i].classList.toggle("disactive")
-            items[i].classList.toggle("move-to-left")
+    getCurrentBeginIndex() {
+        return this.#currentBeginIndex
         }
-    } else  {
-        console.log("SPサイズ")
 
-        isSp = true
+    getCurrentEndIndex() {
+        return this.#currentEndIndex
+    }
 
-        // Indexの計算
-        currentEndIndex = LIMIT_SLIDER_ITEM_SP - 1
+    incrementCountClick(countAllSliderItem) {
+        if (this.#countClick >= countAllSliderItem -1) return
+        this.#countClick = this.#countClick + 1
+        return true
+    }
 
-        // 非表示にする
-        for (let i = LIMIT_SLIDER_ITEM_SP - 1; ++i; i < items.length) {
-            console.log(i)
-            if (i == items.length ) return 
-            items[i].classList.toggle("disactive")
-            items[i].classList.toggle("move-to-left")
+    decrementCountClick() {
+        if (this.#countClick <= 0) return 
+        this.#countClick = this.#countClick - 1
+        return true
         }
-    } 
+
+    incrementCurrentIndex(countAllSliderItem) {
+        if (this.#currentEndIndex >= countAllSliderItem - 1) return
+
+        this.#currentEndIndex = this.#currentEndIndex + 1
+        this.#currentBeginIndex = this.#currentBeginIndex + 1
+
+        return true
 }
 
-// スライだー非表示要素の切り替え
-const checkDisableSliderItem = (PREFIX) => {
-    const items = document.querySelectorAll(".slide")
+    decrementCurrentIndex() {
+        if (this.#currentBeginIndex <= 0) return
+        if (this.#currentBeginIndex !== this.#countClick) return
 
-    console.log(items.length - LIMIT_SLIDER_ITEM_PC)
+        this.#currentEndIndex = this.#currentEndIndex - 1
+        this.#currentBeginIndex = this.#currentBeginIndex - 1
 
-    if (isPc && currentBeginIndex >= items.length - LIMIT_SLIDER_ITEM_PC + 1 ) {
-        return
+        return true
+    }
     }
 
     // if (isTablet && count_introduce >= LIMIT_SLIDER_ITEM_TABLET - 1) {
