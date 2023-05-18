@@ -34,19 +34,19 @@ class SliderState {
 
         // 表示されているスライダーの最後のインデックス
         this.#currentEndIndex = this.#limitCountItem - 1
-        }
-        
+    }
+
     getLimitCountItem() {
         return this.#limitCountItem
     }
-        
+
     getCountClick() {
         return this.#countClick
     }
 
     getCurrentBeginIndex() {
         return this.#currentBeginIndex
-        }
+    }
 
     getCurrentEndIndex() {
         return this.#currentEndIndex
@@ -62,7 +62,7 @@ class SliderState {
         if (this.#countClick <= 0) return 
         this.#countClick = this.#countClick - 1
         return true
-        }
+    }
 
     incrementCurrentIndex(countAllSliderItem) {
         if (this.#currentEndIndex >= countAllSliderItem - 1) return
@@ -71,7 +71,7 @@ class SliderState {
         this.#currentBeginIndex = this.#currentBeginIndex + 1
 
         return true
-}
+    }
 
     decrementCurrentIndex() {
         if (this.#currentBeginIndex <= 0) return
@@ -82,11 +82,8 @@ class SliderState {
 
         return true
     }
-    }
+}
 
-    // if (isTablet && count_introduce >= LIMIT_SLIDER_ITEM_TABLET - 1) {
-    //     return
-    // }
 
 /*
 
@@ -125,7 +122,7 @@ const toggleDisplayArrowBtn = (countClick, countAllSliderItem) => {
     } else if (countClick !== countAllSliderItem - 1 && nextBtn.classList.contains("disabled")) {
         nextBtn.classList.toggle("disabled")
     }
-
+    
     // 非表示
     if (countClick === 0) {
         prevBtn.classList.toggle("disabled")
@@ -137,14 +134,14 @@ const toggleDisplayArrowBtn = (countClick, countAllSliderItem) => {
 // 矢印の動きに合わせて、自己紹介セクションを表示・非表示する関数
 const toggleDisplayIntroSection = (PREFIX, countClick) => {
 
-        if (PREFIX === "ADD") {
+    if (PREFIX === "ADD") {
         members_introduce[countClick - 1].classList.toggle("disactive")
         members_introduce[countClick].classList.toggle("disactive")
-        } else {
+    } else {
         members_introduce[countClick + 1].classList.toggle("disactive")
         members_introduce[countClick].classList.toggle("disactive")
-        }
     }
+}
 
 
 
@@ -158,35 +155,50 @@ const toggleDisplayIntroSection = (PREFIX, countClick) => {
 // SliderStateの初期化
 const slider = new SliderState()
 
-        console.log("実行")
+/*
 
-        if (isPc && currentBeginIndex >= items.length - LIMIT_SLIDER_ITEM_PC + 1 ) {
-            return
-        }
-        currentBeginIndex = currentBeginIndex - 1
-        currentEndIndex = currentEndIndex - 1
+イベントハンドラ、コールバック関数の登録
 
-        console.log(currentBeginIndex, currentEndIndex, count_introduce)
-    }
-}
+*/
 
+// 初回ページ生成時（DOM構築後）のイベント処理
 window.addEventListener('load', () => {
-    disableSliderItem()
-    checkDisableArrowItem(currentBeginIndex, currentEndIndex)
+    console.log("DOM構築後")
+    slider.initState(window.innerWidth)
+
+    // UI系の制御
+    initDisableSliderItem(items, slider.getLimitCountItem())
+    toggleDisplayArrowBtn(slider.getCountClick(), items.length)
 })
 
+
+// 左矢印ボタンクリック時のイベント登録
 prevBtn.addEventListener("click", (e) => {
     console.log("前へ")
-    calcIndex("REDUCE")
-    checkDisableArrowItem(currentBeginIndex, currentEndIndex)
-    checkDisableSliderItem("REDUCE")
-    checkDisableMemberIntroduceItem("REDUCE")
+    const isAbleDone = slider.decrementCurrentIndex()
+    slider.decrementCountClick()   
+
+    // UI系の制御
+    toggleDisplayArrowBtn(slider.getCountClick(), items.length)
+    toggleDisplayIntroSection("REDUCE", slider.getCountClick())
+
+    // スライダー要素の表示切り替えを行う際に、状態（現在表示しているスライダー要素のインデックス）を参照し、条件をクリアしていれば実行
+    if (isAbleDone) {
+        toggleDisableSliderItem("REDUCE", slider.getCurrentBeginIndex(), slider.getCurrentEndIndex())
+    }
 })
 
+// 右矢印ボタンクリック時のイベント登録
 nextBtn.addEventListener("click", (e) => {
     console.log("次へ")
-    calcIndex("ADD")
-    checkDisableArrowItem(currentBeginIndex, currentEndIndex)
-    checkDisableSliderItem("ADD")
-    checkDisableMemberIntroduceItem("ADD")
+    slider.incrementCountClick(items.length)
+    const isAbleDone = slider.incrementCurrentIndex(items.length)
+
+    // UI系の制御
+    toggleDisplayArrowBtn(slider.getCountClick(), items.length)
+    toggleDisplayIntroSection("ADD", slider.getCountClick())
+
+    if (isAbleDone) {
+        toggleDisableSliderItem("ADD", slider.getCurrentBeginIndex(), slider.getCurrentEndIndex())
+    }
 })
