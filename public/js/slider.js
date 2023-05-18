@@ -88,87 +88,65 @@ class SliderState {
     //     return
     // }
 
-    // if (isSp && count_introduce >= LIMIT_SLIDER_ITEM_SP - 1) {
-    //     return
-    // }
+/*
 
+    UIを操作する関数群
+
+*/
+
+
+// ロード時にウィンドウ幅からあふれるスライダー要素を非表示にする関数
+const initDisableSliderItem = (items, limitCountItem) => {
+    for (let i = limitCountItem; i < items.length; i++) { 
+        items[i].classList.toggle("disactive")
+        items[i].classList.toggle("move-to-left")
+    }
+}
+
+// 矢印ボタンの動きに合わせて、スライダー要素を非表示・表示する関数
+const toggleDisableSliderItem = (PREFIX, currentBeginIndex, currentEndIndex) => {
     if (PREFIX === "ADD") {
-        console.log(currentBeginIndex, currentEndIndex, count_introduce)
         items[currentBeginIndex - 1].classList.toggle("disactive")
         items[currentEndIndex].classList.toggle("disactive")
-        items[currentEndIndex].style.transform = "translateX(0)"
+        items[currentEndIndex].style.transform = "translateX(0)"　// 表示する際にウィンドウ外にある要素を移動させる必要がある
     } else if (PREFIX === "REDUCE") {
-        console.log(currentBeginIndex, currentEndIndex, count_introduce)
         items[currentBeginIndex].classList.toggle("disactive")
+        items[currentBeginIndex].style.transform = "translateX(0)"
         items[currentEndIndex + 1].classList.toggle("disactive")
     }
 }
 
-// 自己紹介セクションの非表示の切り替え
-
-const checkDisableMemberIntroduceItem = (PREFIX) => {
-
-    if (PREFIX === "ADD") {
-        members_introduce[count_introduce - 1].classList.toggle("disactive")
-        members_introduce[count_introduce].classList.toggle("disactive")
-    } else {
-        members_introduce[count_introduce + 1].classList.toggle("disactive")
-        members_introduce[count_introduce].classList.toggle("disactive")
-    }
-}
-
-// 矢印要素を非表示にする関数
-const checkDisableArrowItem = (beginIndex, endIndex) => {
-
-    const items = document.querySelectorAll(".slide")
+// 矢印ボタンの表示・非表示を切り替える関数
+const toggleDisplayArrowBtn = (countClick, countAllSliderItem) => {
 
     // 表示
-    if (count_introduce !== 0 && prevBtn.classList.contains("disabled")) {
+    if (countClick !== 0 && prevBtn.classList.contains("disabled")) {
         prevBtn.classList.toggle("disabled")
-    } else if (count_introduce !== items.length - 1 && nextBtn.classList.contains("disabled")) {
+    } else if (countClick !== countAllSliderItem - 1 && nextBtn.classList.contains("disabled")) {
         nextBtn.classList.toggle("disabled")
     }
 
     // 非表示
-    if (count_introduce === 0) {
+    if (countClick === 0) {
         prevBtn.classList.toggle("disabled")
-    } else if (count_introduce === items.length - 1) {
+    } else if (countClick === countAllSliderItem - 1) {
         nextBtn.classList.toggle("disabled")
     }
 }
 
+// 矢印の動きに合わせて、自己紹介セクションを表示・非表示する関数
+const toggleDisplayIntroSection = (PREFIX, countClick) => {
 
-// 現在の始めと終わりIndexを計算する
-const calcIndex = (PREFIX) => {
-
-    const items = document.querySelectorAll(".slide")
-
-    if (isPc && currentBeginIndex >= items.length - LIMIT_SLIDER_ITEM_PC) {
         if (PREFIX === "ADD") {
-            count_introduce++
+        members_introduce[countClick - 1].classList.toggle("disactive")
+        members_introduce[countClick].classList.toggle("disactive")
         } else {
-            count_introduce--
+        members_introduce[countClick + 1].classList.toggle("disactive")
+        members_introduce[countClick].classList.toggle("disactive")
         }
-        return
     }
 
-    // if (isTablet && count_introduce - 1 >= LIMIT_SLIDER_ITEM_TABLET - 1) {
-    //     if (PREFIX === "ADD") {
-    //         count_introduce++
-    //     } else {
-    //         count_introduce--
-    //     }
-    //     return
-    // }
 
-    // if (isSp && count_introduce - 1 >= LIMIT_SLIDER_ITEM_SP - 1) {
-    //     if (PREFIX === "ADD") {
-    //         count_introduce++
-    //     } else {
-    //         count_introduce--
-    //     }
-    //     return
-    // }
 
 /*
 
