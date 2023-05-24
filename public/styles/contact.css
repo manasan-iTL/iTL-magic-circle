@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 16px;
+    background-color: black;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.heading {
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
+}
+
+.text {
+    font-family: 'Noto Serif JP', serif;
+    color: #FFFFFF;
+}
