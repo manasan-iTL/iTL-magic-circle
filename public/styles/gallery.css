@@ -1,0 +1,47 @@
+
+.gallery-heading {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.gallery-form {
+    text-align: center;
+    margin: 20px 0 40px;
+}
+
+.gallery-pictures {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.picture {
+    width: calc(100% / 4 );
+    border: 1px solid white;
+    height: 150px;
+}
+
+.picture > img {
+    width: 100%;
+    height: auto;
+}
+
+/*
+    レスポンシブ対応
+*/
+
+@media screen and (max-width: 1080px) {
+    .picture {
+        width: calc(100% / 3);
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .picture {
+        width: calc(100% / 2);
+    }
+}
