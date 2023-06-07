@@ -48,86 +48,71 @@ html {
     justify-content: center;
     align-items: center;
 }
+
 @media screen and (max-width: 1080px) {
-    .h-nav-heading {
-        font-size: 4em;
-        text-align: center;
-    }
-
-    .global-nav {
-        text-align: center;
-    }
-
-    .h-nav-contact-area {
-        justify-content: center;
-    }
-
-    .h-heading {
-        font-size: 4em;
-    }
-
-    .h-humbergar {
-        margin-top: 10px;
-    }
-
     .h-heading {
         padding-left: 40px;
-    }    
-    .text {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    .text {
-        font-size: 30px;
     }
 
 }
 
-@media screen and (max-width: 550px) {
-
-    /* ヘッダー */
-
-    .h-nav-heading {
-        font-size: 2.5em;
-        margin-top: 50px;
+@media screen and (max-width: 1080px) {
+    .slide-area {
+        padding: 30px 0 30px 40px;
     }
 
-    .h-heading {
-        font-size: 2.5em;
+    .member-area {
+        padding: 30px 40px;
     }
 
-    .h-float-area {
-        padding-right: 20px;
+    .member-container {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
     }
 
-    .h-humbergar {
-        margin-top: 15px;
-        width: 45px;
-    }
-
-    .h-humbergar span:nth-of-type(2) {
-        top: 12px;
-    }
-
-    .h-humbergar span:nth-of-type(3) {
-        top: 24px;
-    }
-
-    .main {
-        padding: 10px 25px;
-    }
-
-    .top-section {
+    .member-name, .member-hobby {
         margin-bottom: 30px;
     }
+}
 
+
+
+@media screen and (max-width: 550px) {
     .h-heading, .slide-area {
         padding-left: 0px;
     }
 
-    .text {
-        font-size: 0.9em;
+    .arrow-left, .arrow-right {
+        width: 50px;
     }
 
+    .arrow-left > img, .arrow-right > img {
+        width: 100%;
+    }
+
+
+    .slides {
+        padding: 20px 0;
+    }
+
+    .member-area {
+        padding: 30px 0;
+    }
+
+    .member-container {
+        padding: 0;
+    }
+
+    .member-image {
+        width: 150px;
+    }
+
+    .member-image > img {
+        width: 100%;
+    }
+
+    .member-introduce {
+        font-size: 1em;
+    }
 }
