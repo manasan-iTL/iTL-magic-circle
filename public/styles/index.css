@@ -324,7 +324,12 @@ html {
     row-gap: 65px;
     column-gap: 30px;
 }
-
+/*noteのロゴのサイズ*/
+.note_logo{
+    margin-top: 1em;
+    font-size: 2em;
+    text-align: center;
+}
 .s-comming-soon {
     min-width: 200px;
 }
