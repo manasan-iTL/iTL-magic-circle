@@ -32,6 +32,8 @@ html {
 .text {
     font-family: 'Noto Serif JP', serif;
     color: #FFFFFF;
+    margin-top: 40px;
+
 }
 
 .text {
@@ -47,6 +49,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 1080px) {
