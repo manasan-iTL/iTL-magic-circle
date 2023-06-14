@@ -31,6 +31,24 @@ html {
     width: 100%;
 }
 
+/*menuから引用してくる*/
+a:link {
+    text-decoration:none;
+    color: #ffffff;
+}
+a:visited {
+    text-decoration:none;
+    color:#FFFFFF;
+}
+a:active {
+    text-decoration:none;
+    color:#0033cc;
+}
+a:hover {
+    text-decoration:underline;
+    color: #D9D9D9;
+}
+
 /*
     メインビジュアル
 */
@@ -226,14 +244,14 @@ html {
     border-bottom: 1px solid #FFD700;
     font-size: 2em;
 }
-/*
+
 .s-heading_underline--soon {
     width: fit-content;
     padding: 5px 20px;
     border-bottom: 5px solid #D9D9D9;
     margin: 0 auto;
 }
-*/
+
 /*
     キャッチコピーセクション
 */
@@ -319,53 +337,34 @@ html {
 }
 
 /*0611実験　画像サイズ*/
-.flex-container {
-    display: flex;
-    margin-right: 60px;
+.flex-container{
+   flex-wrap: wrap;
+    margin-top: 30px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    display:flex;
 }
 
-.image-wrap{
-    margin: 25px 5px;
-}
-
-.image-wrap img {
-    height: 300px;
+.flex-container img{
+    max-width: 100%;
+    height: auto;
     width: 100%;
-}
-
-.flex-item{
-    flex-basis: 100%;
 }
 
 /*Galleryのmoreのふぉんとさいずとイチの変更*/
 .s-gallery-text-right{
     text-align: right;
-    margin-right: 60px;
+    margin-top: 20px;
+    margin-right: 80px;
     font-size: 30px;
-
 }
 
-/*
-    Comming Soon
-*/
-
-/*
-.s-comming-soons {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-    row-gap: 65px;
-    column-gap: 30px;
-}
-*/
+/*note link contact*/
 /*noteのロゴのサイズ*/
 .note_logo{
     text-align: center;
     width: 130px;
     height: 70%;
-    border-bottom: 2px solid #D9D9D9;
     margin-top: 10px;
     margin-right: 45px;
 }
@@ -376,30 +375,21 @@ html {
     font-size: 30px;
     flex-direction: row;
     flex-wrap: wrap;
-    /*row-gap: 65px;
-    column-gap: 30px;*/
-    margin-bottom: 50px;
-
+    row-gap: 65px;
+    column-gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    min-width: 30px;
 }
+
 .note_contact_link h2{
-    border-bottom: 2px solid #D9D9D9;
     margin-left: 45px;
     margin-right: 45px;
     margin-top: 10px;
     font-size: 30px;
+    border-bottom: 2px solid #D9D9D9;
 }
 
-/*
-.s-comming-soon {
-    min-width: 200px;
-    text-align: center;
-}
-
-.s-comming-soon_text {
-    margin-top: 1em;
-    font-size: 2em;
-}
-*/
 .twitter-timeline {
     margin: 30px auto;
     padding-top: 50px;
@@ -525,6 +515,9 @@ html {
 */
 
 @media screen and (max-width: 1080px) {
+    .s-about-text_right > .text {
+        font-size: 1em;
+    }
     .s-members,
     .s-twitter > .heading {
         margin: 0 auto;
@@ -548,10 +541,10 @@ Galleryセクション
 */
 
 @media screen and (max-width: 1080px) {
-    .flex-container {
+   /* .flex-container {
         display: flex;
         margin-right: 10px;
-    }
+    }*/
     
     .image-wrap{
         margin: 25px 5px;
@@ -568,10 +561,14 @@ Galleryセクション
     
 }
 
-/*MOREのフォントサイズ*/
-@media screen and(max-width: 550px) {
-    .s-about-text_right{
-        font-size: 10px;
+/*moreのフォントサイズ*/
+
+@media screen and (max-width: 1080px) {
+    .s-about-text_right > .text {
+        font-size: 1em;
+    }
+    .s-member-text_right > .text{
+        font-size: 1em;
     }
 }
 
@@ -644,7 +641,7 @@ Galleryセクション
     }
 
     .s-about-text_right > .text {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 }
 
@@ -682,20 +679,28 @@ Galleryセクション
     .note_contact_link{
         text-align: center;
         display: block;
+
     }
     .note_contact_link h2{
         margin-left: 0px;
         margin-right: 0px;
-
+        width: 100px;
+        text-align: center;
     }
     .note_logo{
         margin-left: 0px;
         margin-right: 0px;
     }
 }
-
+/*
 @media screen and (max-width: 550px){
     .flex-container {
         display: block;
+    }
+}*/
+/*MOREのフォントサイズ*/
+@media screen and(max-width: 550px) {
+    .s-about-text_right{
+        font-size: 10px;
     }
 }
