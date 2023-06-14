@@ -338,17 +338,21 @@ a:hover {
 
 /*Gallery画像サイズ*/
 .flex-container{
-   flex-wrap: wrap;
+    display:flex;
+    flex-wrap: wrap;
     margin-top: 30px;
     max-width: 100%;
-    flex-wrap: wrap;
-    display:flex;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
+
 
 .flex-container img{
     max-width: 100%;
     height: auto;
-    width: 100%;
+    width: 30%;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /*Galleryのmore*/
@@ -542,24 +546,7 @@ Galleryセクション
 */
 
 @media screen and (max-width: 1080px) {
-   /* .flex-container {
-        display: flex;
-        margin-right: 10px;
-    }*/
-    
-    .image-wrap{
-        margin: 25px 5px;
-    }
-    
-    .image-wrap img {
-        height: 300px;
-        width: 100%;
-    }
-    
-    .flex-item{
-        flex-basis: 100%;
-    }
-    
+
 }
 
 /*moreのフォントサイズ*/
@@ -680,6 +667,24 @@ Galleryセクション
     .note_contact_link{
         margin-bottom: 50px;
     }    
+}
+
+@media screen and(max-width: 550px) {
+    .flex-container{
+        display:inline-block;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    
+    .flex-container img{
+        max-width: 100%;
+        height: auto;
+        width: 50%;
+    }
 }
 
 /*MOREのフォントサイズ*/
