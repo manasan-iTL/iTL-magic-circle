@@ -336,7 +336,7 @@ a:hover {
     font-size: 30px;
 }
 
-/*0611実験　画像サイズ*/
+/*Gallery画像サイズ*/
 .flex-container{
    flex-wrap: wrap;
     margin-top: 30px;
@@ -351,7 +351,7 @@ a:hover {
     width: 100%;
 }
 
-/*Galleryのmoreのふぉんとさいずとイチの変更*/
+/*Galleryのmore*/
 .s-gallery-text-right{
     text-align: right;
     margin-top: 20px;
@@ -367,6 +367,7 @@ a:hover {
     height: 70%;
     margin-top: 10px;
     margin-right: 45px;
+    border-bottom: 2px solid #D9D9D9;
 }
 /*note contact linkの部分*/
 .note_contact_link{
@@ -675,32 +676,21 @@ Galleryセクション
     }    
 }
 
-@media screen and (max-width: 550px) {
+@media screen and(max-width: 550px) {
     .note_contact_link{
-        text-align: center;
-        display: block;
-
-    }
-    .note_contact_link h2{
-        margin-left: 0px;
-        margin-right: 0px;
-        width: 100px;
-        text-align: center;
-    }
-    .note_logo{
-        margin-left: 0px;
-        margin-right: 0px;
-    }
+        margin-bottom: 50px;
+    }    
 }
-/*
-@media screen and (max-width: 550px){
-    .flex-container {
-        display: block;
-    }
-}*/
+
 /*MOREのフォントサイズ*/
 @media screen and(max-width: 550px) {
     .s-about-text_right{
         font-size: 10px;
     }
+    .s-gallery-text-right{
+        padding-left: 100px;
+        font-size: 10px;
+        text-align: right;
+    }
+
 }
