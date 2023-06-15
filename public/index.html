@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Noto+Serif+JP&display=swap" rel="stylesheet">
     <script src="./js/hamburger-menu.js" defer></script>
+    <!--GalleryのJS-->
+    <script src="./js/top-gallery.js"></script>
     <title>TOPページ</title>
 </head>
 <body>
@@ -175,11 +177,21 @@
         </section>
             <!--Gallery-->
             <h2 class="s-heading_underline heading">Gallery</h2>
+            </div>
             <!--Galleryの写真→固定-->
             <div class="flex-container">
                 <img src="./images/Top_Gallery1.jpg" class="image-wrap">
                 <img src="./images/Top_Gallery2.jpg" class="image-wrap">
                 <img src="./images/Top_Gallery3.jpg" class="image-wrap">
+            </div>
+            <!--sm版のときだけ出現-->
+            <div class="gallery_sp">
+                <!--back-->
+                <button value="戻る" onclick="go_back()" class="button_gallery_left"><img src="./images/material-symbols_arrow-back-ios-new.png" class="arrow_left"></button>
+                <!--image-->
+                    <img id="mypic" src="./images/Top_Gallery1.jpg" width="400" height="300">
+                <!--next-->
+                <button value="進む" onclick="go_forward()" class="button_gallery_right"><img src="./images/material-symbols_arrow-back-ios-new.png" class="arrow_right"></button>
             </div>
             <!--→more-->
             <div class="s-gallery-text-right">
