@@ -544,6 +544,22 @@ a:hover {
     .s-member-text_right > .text {
         font-size: 2em;
     }
+
+    .s-gallery-text-right{
+        padding: 100px 0 0 0;
+        transform: translateY(-100px);
+    }
+
+    .note_contact_link{
+        transform: translateY(-10px);
+        margin-right: 0px;
+        margin-left: 0px;
+        row-gap: 20px;
+        column-gap: 0px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        min-width: 0px;
+    }
 }
 
 /*
@@ -656,12 +672,6 @@ Galleryセクション
     }
 }
 
-@media screen and(max-width: 550px) {
-    .note_contact_link{
-        margin-bottom: 20px;
-        transform: translateY(-500px);
-    }    
-}
 
 /*Gallery*/
 @media screen and (max-width: 550px) {
@@ -702,7 +712,15 @@ Galleryセクション
         text-align: right;
         transform: translateY(-100px);
     }
+
+    /*note_contact_link*/
     .note_contact_link{
-        transform: translateY(-30px);
+        transform: translateY(-20px);
+        row-gap: 20px;
+        column-gap: 0px;
+    }
+    .note_logo{
+        margin-left: 50px;
+        transform: translateY(20px);
     }
 }
