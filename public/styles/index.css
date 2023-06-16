@@ -659,6 +659,7 @@ Galleryセクション
 @media screen and(max-width: 550px) {
     .note_contact_link{
         margin-bottom: 20px;
+        transform: translateY(-500px);
     }    
 }
 
@@ -697,17 +698,11 @@ Galleryセクション
     .gallery_sp img{
         width: 80%;
     }
-
-}
-
-/*MOREのフォントサイズ*/
-@media screen and(max-width: 550px) {
-    .s-about-text_right{
-        font-size: 10px;
-    }
     .s-gallery-text-right{
-        font-size: 10px;
         text-align: right;
+        transform: translateY(-100px);
     }
-
+    .note_contact_link{
+        transform: translateY(-30px);
+    }
 }
