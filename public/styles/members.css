@@ -64,6 +64,7 @@
 
 .member-container {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     padding: 0 80px;
 }
@@ -79,6 +80,10 @@
 
 .name-label, .hobby-label, .phrase-label {
     text-decoration: underline 1px white;
+}
+
+.member-image > img {
+    width: 270px;
 }
 
 /*
