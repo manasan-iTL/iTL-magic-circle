@@ -168,13 +168,18 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+/*PC版のときはかくす*/
+.gallery_sp{
+    display: none;
+}
 
 /*Galleryのmore*/
 .s-gallery-text-right{
     text-align: right;
     margin-top: 20px;
-    margin-right: 80px;
+    /*margin-right: 80px;*/
     font-size: 30px;
+    padding: 100px 100px 0px 100px;
 }
 
 /*note link contact*/
@@ -312,6 +317,22 @@
     .s-member-text_right > .text {
         font-size: 2em;
     }
+
+    .s-gallery-text-right{
+        padding: 100px 0 0 0;
+        transform: translateY(-100px);
+    }
+
+    .note_contact_link{
+        transform: translateY(-10px);
+        margin-right: 0px;
+        margin-left: 0px;
+        row-gap: 20px;
+        column-gap: 0px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        min-width: 0px;
+    }
 }
 
 /*
@@ -319,7 +340,9 @@ Galleryセクション
 */
 
 @media screen and (max-width: 1080px) {
-
+    .s-gallery-text-right{
+        padding: 100px 0 0 0;
+    }
 }
 
 /*moreのフォントサイズ*/
@@ -404,53 +427,54 @@ Galleryセクション
     }
 }
 
-@media screen and(max-width: 550px) {
-    .flex-item {
-        width: 100%;
+
+/*Gallery*/
+@media screen and (max-width: 550px) {
+    .gallery_sp{
         display: flex;
+        margin-top: 25px;
+        
     }
-    
-    .flex-item img {
-        width: auto;
-        max-width: 100%;
-        height: auto;
-        max-height: 400px;
-    }    
-}
-
-@media screen and(max-width: 550px) {
-    .note_contact_link{
-        margin-bottom: 50px;
-    }    
-}
-
-@media screen and(max-width: 550px) {
     .flex-container{
-        display:inline-block;
-        flex-wrap: wrap;
-        margin-top: 30px;
-        max-width: 100%;
-        justify-content: center;
-        text-align: center;
+        display: none;
     }
-    
-    
-    .flex-container img{
-        max-width: 100%;
-        height: auto;
-        width: 50%;
+    .arrow_right{
+        transform: rotate(180deg);
+        background-color: black;
     }
-}
-
-/*MOREのフォントサイズ*/
-@media screen and(max-width: 550px) {
-    .s-about-text_right{
-        font-size: 10px;
+    .arrow_left{
+        background-color: black;
+    }
+    .button_gallery{
+        width: 0px;
+        background-color: black;
+    }
+    .button_gallery_left{
+        background-color: black;
+        border: black;
+    }
+    .button_gallery_right{
+        background-color: black;
+        border: black;
+    }
+    .gallery_size{
+        width: 30px;
+    }
+    .gallery_sp img{
+        width: 80%;
     }
     .s-gallery-text-right{
-        padding-left: 100px;
-        font-size: 10px;
         text-align: right;
+        transform: translateY(-100px);
     }
 
+    /*note_contact_link*/
+    .note_contact_link{
+        transform: translateY(-20px);
+        row-gap: 20px;
+        column-gap: 0px;
+    }
+    .note_logo{
+        margin-left: 50px;
+    }
 }
