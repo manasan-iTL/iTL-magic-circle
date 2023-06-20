@@ -3,3 +3,7 @@
     text-decoration: underline;
     font-size: 40px;
 }
+
+.members-only-container {
+    padding: 40px 20px 0px;
+}
