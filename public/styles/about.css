@@ -5,12 +5,16 @@ body {
     background-color: #1E1E1E;
 }
 
+.about-container {
+    padding: 40px 20px 0px;
+}
+
 .about_header {
     font-size: 85px;
     font-weight: 400;
     font-family: 'Alegreya', serif;
     text-align: center;
-    margin: 100px;
+    margin-bottom: 80px;
 }
 
 .wrapper_1, .wrapper_2, .wrapper_3 {
@@ -33,7 +37,7 @@ img {
     width: 100%;
 }
 
-.text {
+.about-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
