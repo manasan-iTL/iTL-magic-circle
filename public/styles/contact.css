@@ -1,0 +1,48 @@
+
+.contact-container {
+    padding: 40px 20px 0px;
+}
+
+.h-container {
+    display: flex;
+}
+
+.h-heading{
+    font-size: 3rem;
+    color: white;
+    text-align: left;
+    padding-left: 100px;
+}
+
+.contact-text {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-description {
+    margin-top: 40px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1080px) {
+    .h-heading {
+        padding-left: 40px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .h-heading {
+        padding-left: 0px;
+    }
+}

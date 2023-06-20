@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Noto+Serif+JP&display=swap" rel="stylesheet">
     <script src="./js/hamburger-menu.js" defer></script>
+    <!--GalleryのJS-->
+    <script src="./js/top-gallery.js"></script>
     <title>TOPページ</title>
 </head>
 <body>
@@ -43,9 +46,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="h-global-menu-text text">
+                        <a href="./gallery/top.html" class="h-global-menu-text text">
                             Gallery
-                        </a> 
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a href="./link.html" class="h-global-menu-text text">
@@ -66,7 +69,7 @@
             </nav>
             <div class="h-nav-contact-area">
                 <a href="https://note.com/itlmagic/" class="anchor-box">
-                    <img src="./images/logo.png" alt="note">
+                    <img src="./images/note_logo.png" alt="note">
                 </a>
                 <a href="https://twitter.com/iTL57989039" class="anchor-box">
                     <img src="./images/Twitter-logo-blue.png" alt="Twitter">
@@ -78,7 +81,9 @@
         <section class="top-section s-catch-copy">
             <p class="catch-copy-text text">
                 部員募集中・公演受付中<br>
-                <span class="catch-copy-text_small">→お問い合わせはこちら</span>
+                <span class="catch-copy-text_small"> <a href="./contact.html" class="text">
+                    →お問い合わせはこちら
+                </a></span>
             </p>
         </section>
         <section class="top-section s-about">
@@ -171,28 +176,50 @@
                 </p>
             </div>
         </section>
-        <div class="s-comming-soons">
-            <section class="s-comming-soon">
-                <h2 class="s-heading_underline--soon heading">Gallery</h2>
-                <p class="s-comming-soon_text text">COMMING SOON</p>
-            </section>
-            <section class="s-comming-soon">
-                <h2 class="s-heading_underline--soon heading">Blog</h2>
-                <p class="s-comming-soon_text text">COMMING SOON</p>
-            </section>
-            <section class="s-comming-soon">
-                <h2 class="s-heading_underline--soon heading">Contact</h2>
-                <p class="s-comming-soon_text text">COMMING SOON</p>
-            </section>
-            <section class="s-comming-soon">
-                <h2 class="s-heading_underline--soon heading">Link</h2>
-                <p class="s-comming-soon_text text">COMMING SOON</p>
-            </section>
+            <!--Gallery-->
+            <h2 class="s-heading_underline heading">Gallery</h2>
+            </div>
+            <!--Galleryの写真→固定-->
+            <div class="flex-container">
+                <img src="./images/Top_Gallery1.jpg" class="image-wrap">
+                <img src="./images/Top_Gallery2.jpg" class="image-wrap">
+                <img src="./images/Top_Gallery3.jpg" class="image-wrap">
+            </div>
+            <!--sm版のときだけ出現-->
+            <div class="gallery_sp">
+                <!--back-->
+                <button value="戻る" onclick="go_back()" class="button_gallery_left"><img src="./images/material-symbols_arrow-back-ios-new.png" class="arrow_left"></button>
+                <!--image-->
+                    <img id="mypic" src="./images/Top_Gallery1.jpg" width="400" height="300">
+                <!--next-->
+                <button value="進む" onclick="go_forward()" class="button_gallery_right"><img src="./images/material-symbols_arrow-back-ios-new.png" class="arrow_right"></button>
+            </div>
+            <!--→more-->
+            <div class="s-gallery-text-right">
+                <a href="./gallery.html" class="text">
+                    →more...
+                </a>
+            </div>
+            <div class="note_contact_link">
+                <!--note-->
+                <section class="note_contact_link">
+                    <a href="https://note.com/itlmagic/"><img src="./images/note_logo.png" class="note_logo"></a>
+                </section>
+                <!--contact-->
+                <section class="note_contact_link">
+                    <a href="contact.html"><h2>Contact</h2></a>
+                </section>
+                <!--link-->
+                <section class="note_contact_link">
+                    <a href="link.html"> <h2>Link</h2></a>
+                </section>
+            </div>
         </div>
         <section class="s-twitter">
             <h2 class="s-heading_underline heading">Twitter</h2>
+            <!--Twitterの長さ調整済み20230607-->
             <div>
-                <a class="twitter-timeline" href="https://twitter.com/iTL57989039?ref_src=twsrc%5Etfw">Tweets by iTL57989039</a>
+                <a class="twitter-timeline" data-height="600" href="https://twitter.com/iTL57989039?ref_src=twsrc%5Etfw">Tweets by iTL57989039</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </section>
