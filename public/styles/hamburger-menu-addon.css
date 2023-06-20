@@ -11,3 +11,8 @@
 .h-humbergar {
     margin: 0 0 0 auto;
 }
+
+.h-humbergar.active {
+    position: fixed;
+    right: 20px;
+}
