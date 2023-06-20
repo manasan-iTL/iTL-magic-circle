@@ -96,7 +96,7 @@ a:hover {
 
 .h-humbergar span {
     display: inline-block;
-    transition: all .4s;
+    transition: all.3s linear;
     position: absolute;
     height: 4px;
     background: #fff;
@@ -149,15 +149,13 @@ a:hover {
     width: 100%;
     height: 100vh;
     overflow-y: auto;
-    transition: 1s;
+    transition: all.3s linear;
     padding: 0 10px 0 30px;
     transform: translateX(100%);
-    opacity: 0;
 }
 
 .h-nav-area.active {
     transform: translateX(0);
-    opacity: 1;
 }
 
 .mask {
@@ -168,15 +166,13 @@ a:hover {
     width: 100%;
     height: 100vh;
     background-color: #1E1E1E;
-    transition: $transition-duration;
+    transition: all.3s linear;
     transform: translateX(100%);
-    opacity: 0;
     cursor: pointer;
 }
 
 .mask.active {
     transform: translateX(0);
-    opacity: 1;
 }
 
 .h-nav-heading {
