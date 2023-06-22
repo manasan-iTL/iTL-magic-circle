@@ -224,6 +224,7 @@ a:hover {
 }
 
 
+
 /*
   レスポンシブ対応
 */
@@ -312,6 +313,7 @@ a:hover {
 
 .footer {
     margin-top: 100px;
+    margin-bottom: 30px;
 }
 
 .yellow-line {
