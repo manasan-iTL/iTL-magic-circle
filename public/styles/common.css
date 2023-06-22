@@ -53,6 +53,14 @@ html {
     width: 100%;
 }
 
+/*h1見出し*/
+.h-heading{
+    font-size: 3rem;
+    color: white;
+    text-align: left;
+    padding-left: 100px;
+}
+
 
 /*menuから引用してくる*/
 a:link {
@@ -229,7 +237,19 @@ a:hover {
 */
 
 @media screen and (max-width: 1080px) {
+    .h-heading {
+        padding-left: 40px;
+    }
 
+}
+
+@media screen and (max-width: 1080px) {
+    /*h1見出し*/
+    .h-heading {
+        padding-left: 40px;
+    }
+
+    /*ナビゲーション*/
     .h-nav-heading {
         font-size: 4em;
         text-align: center;
@@ -258,7 +278,12 @@ a:hover {
 */
 
 @media screen and (max-width: 550px) {
+    /*h1見出し*/
+    .h-heading{
+        padding-left: 0px;
+    }
 
+    /*ナビゲーション*/
     .h-nav-heading {
         font-size: 2.5em;
         margin-top: 50px;
