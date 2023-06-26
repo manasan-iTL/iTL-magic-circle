@@ -213,12 +213,16 @@
     border-bottom: 2px solid #D9D9D9;
 }
 
+.twitter-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .twitter-timeline {
     margin: 30px auto;
     padding-top: 50px;
     width: 70%;
 }
-
 
 
 /*
