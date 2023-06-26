@@ -143,6 +143,7 @@ a:hover {
 
 .h-nav-area {
     position: fixed;
+    top: 0;
     right: 0;
     z-index: 90;
     width: 100%;
