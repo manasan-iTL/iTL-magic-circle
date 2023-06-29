@@ -7,17 +7,6 @@
     display: flex;
 }
 
-.h-heading {
-    font-size: 3rem;
-    color: white;
-    text-align: left;
-    padding-left: 100px;
-}
-
-.h-humbergar {
-    margin: 0 0 0 auto;
-}
-
 
 .slide-area {
     padding: 30px 100px;
@@ -68,6 +57,7 @@
 
 .member-container {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     padding: 0 80px;
 }
@@ -83,6 +73,10 @@
 
 .name-label, .hobby-label, .phrase-label {
     text-decoration: underline 1px white;
+}
+
+.member-image > img {
+    width: 270px;
 }
 
 /*

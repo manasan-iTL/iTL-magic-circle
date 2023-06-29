@@ -11,6 +11,10 @@ main {
     text-align: center;
 }
 
+.about-container {
+    padding: 40px 20px 0px;
+}
+
 .about_header {
     font-size: 85px;
     font-weight: 400;
