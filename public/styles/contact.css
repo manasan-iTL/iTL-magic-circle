@@ -7,15 +7,10 @@
     display: flex;
 }
 
-.h-heading{
-    font-size: 3rem;
-    color: white;
-    text-align: left;
-    padding-left: 100px;
-}
-
-.contact-text {
+.contact-text-top {
+    font-size: 24px;
     color: #FFFFFF;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +18,12 @@
 }
 
 .contact-description {
+    color: #FFFFFF;
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .form{
@@ -38,7 +38,11 @@
     .h-heading {
         padding-left: 40px;
     }
-
+    .contact-text-top{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 50px;
+    }
 }
 
 @media screen and (max-width: 550px) {

@@ -35,7 +35,7 @@
 
 html {
     font-size: 16px;
-    background-color: black;
+    background-color: #1e1e1e;
     font-family: 'Noto Serif JP', serif;
 }
 
@@ -53,6 +53,14 @@ html {
     width: 100%;
 }
 
+/*h1見出し*/
+.h-heading{
+    font-size: 3rem;
+    color: white;
+    text-align: left;
+    padding-left: 100px;
+}
+
 
 /*menuから引用してくる*/
 a:link {
@@ -67,7 +75,7 @@ a:visited {
 
 a:active {
     text-decoration:none;
-    color:#0033cc;
+    color:#ffffff;
 }
 
 a:hover {
@@ -143,6 +151,7 @@ a:hover {
 
 .h-nav-area {
     position: fixed;
+    top: 0;
     right: 0;
     z-index: 90;
     width: 100%;
@@ -216,6 +225,7 @@ a:hover {
 }
 
 
+
 /*
   レスポンシブ対応
 */
@@ -229,7 +239,19 @@ a:hover {
 */
 
 @media screen and (max-width: 1080px) {
+    .h-heading {
+        padding-left: 40px;
+    }
 
+}
+
+@media screen and (max-width: 1080px) {
+    /*h1見出し*/
+    .h-heading {
+        padding-left: 40px;
+    }
+
+    /*ナビゲーション*/
     .h-nav-heading {
         font-size: 4em;
         text-align: center;
@@ -258,7 +280,12 @@ a:hover {
 */
 
 @media screen and (max-width: 550px) {
+    /*h1見出し*/
+    .h-heading{
+        padding-left: 0px;
+    }
 
+    /*ナビゲーション*/
     .h-nav-heading {
         font-size: 2.5em;
         margin-top: 50px;
@@ -287,6 +314,7 @@ a:hover {
 
 .footer {
     margin-top: 100px;
+    margin-bottom: 30px;
 }
 
 .yellow-line {
