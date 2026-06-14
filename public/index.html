@@ -2,232 +2,119 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/common.css">
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Noto+Serif+JP&display=swap" rel="stylesheet">
-    <script src="./js/hamburger-menu.js" defer></script>
-    <!--GalleryのJS-->
-    <script src="./js/top-gallery.js"></script>
-    <title>iTL Magic Circle</title>
+    <title>404 Not Found - ページが見つかりません</title>
+    <style>
+        /* 全体のリセットと基本スタイルの設定 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* コンテナの装飾 */
+        .error-container {
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            background: #ffffff;
+            padding: 50px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 巨大な「404」の数字とアニメーション */
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            line-height: 1;
+            color: #4f46e5; /* モダンなインディゴブルー */
+            margin-bottom: 10px;
+            letter-spacing: -0.05em;
+            position: relative;
+            display: inline-block;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* メッセージ部分 */
+        .error-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .error-message {
+            font-size: 1rem;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        /* 迷子になったユーザーを誘導するボタン */
+        .btn-home {
+            display: inline-block;
+            background-color: #4f46e5;
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 8px;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+        }
+
+        .btn-home:hover {
+            background-color: #4338ca;
+        }
+
+        .btn-home:active {
+            transform: scale(0.98);
+        }
+
+        /* メディアクエリ（スマホ対応） */
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            .error-title {
+                font-size: 1.25rem;
+            }
+            .error-container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="mask"></div>
-    <header class="header">
-        <div class="h-mainvisual">
-            <img src="./images/main-visual.png" alt="メインビジュアル">
-        </div>
-        <div class="h-float-area">
-            <h1 class="h-heading heading">iTL Magic Circle</h1>
-            <div class="h-humbergar" id="hamburger-trigger">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="h-nav-area">
-            <h2 class="h-nav-heading heading">iTL Magic Circle</h2>
-            <nav class="h-global-menu">
-                <ul class="global-nav">
-                    <li class="nav-item">
-                        <a href="./index.html" class="h-global-menu-text text">
-                            Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./about.html" class="h-global-menu-text text">
-                            About us
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./members.html" class="h-global-menu-text text">
-                            Members
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./gallery/top.html" class="h-global-menu-text text">
-                            Gallery
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./link.html" class="h-global-menu-text text">
-                            Link
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./members-only.html" class="h-global-menu-text text">
-                            Members-only
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./contact.html" class="h-global-menu-text text">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="h-nav-contact-area">
-                <a href="https://note.com/itlmagic/" class="anchor-box">
-                    <img src="./images/note_logo.png" alt="note">
-                </a>
-                <a href="https://twitter.com/iTL57989039" class="anchor-box">
-                    <img src="./images/Twitter-logo-blue.png" alt="Twitter">
-                </a>
-            </div>
-        </div>
-    </header>
-    <main class="main">
-        <section class="top-section s-catch-copy">
-            <p class="catch-copy-text text">
-                部員募集中・公演受付中<br>
-                <span class="catch-copy-text_small"> <a href="./contact.html" class="text">
-                    →お問い合わせはこちら
-                </a></span>
-            </p>
-        </section>
-        <section class="top-section s-about">
-            <div class="s-about-text-box">
-                <h2 class="s-heading_underline heading">About us</h2>
-                <p class="s-about-text text">
-                    iTLマジックサークルは、中央大学市ヶ谷田町キャンパスを中心に毎週活動している手品サークルです<br>
-                    入部、見学、マジックを見たいだけの方も大歓迎！<br>
-                    出張依頼・公演依頼も受け付けています♪
-                </p>
-                <p class="s-about-text_right">
-                    <a href="./about.html" class="text">
-                        →more...
-                    </a>
-                </p>
-            </div>
-            <div class="s-about-image-box">
-                <img src="./images/about-image.png" alt="マジシャンの写真" class="image">
-            </div>
-        </section>
-        <section class="top-section">
-            <h2 class="s-members s-heading_underline heading">Members</h2>
-            <div class="s-members-box">
-                <div class="member-cards">
-                    <div class="member-card">
-                        <div class="card-image">
-                            <img src="./images/members/MIYA_icon.png" alt="" class="image">
-                        </div>
-                        <p class="text">MIYA</p>
-                    </div>
-                    <div class="member-card">
-                        <div class="card-image">
-                            <img src="./images/members/J・トミー_icon.png" alt="" class="image">
-                        </div>
-                        <p class="text">J・トミー</p>
-                    </div>
-                    <div class="member-card">
-                        <div class="card-image">
-                            <img src="./images/members/KANA_icon.png" alt="" class="image">
-                        </div>
-                        <p class="text">KANA</p>
-                    </div>
-                    <div class="member-card">
-                        <div class="card-image">
-                            <img src="./images/members/Yuto_icon.png" alt="" class="image">
-                        </div>
-                        <p class="text">Yuto</p>
-                    </div>
-                    <div class="member-card">
-                        <div class="card-image">
-                            <img src="./images/members/なる_icon.png" alt="" class="image">
-                        </div>
-                        <p class="text">なる</p>
-                    </div>
-                    <div class="member-card">
-                        <div class="card-image">
-                            <img src="./images/members/HINA_icon.png" alt="" class="image">
-                        </div>
-                        <p class="text">HINA</p>
-                    </div>
-                    <div class="member-card">
-                        <div class="card-image">
-                            <img src="./images/members/Tak_icon.png" alt="" class="image">
-                        </div>
-                        <p class="text">Tak</p>
-                    </div>
-                    <div class="member-card">
-                        <div class="card-image">
-                            <img src="./images/members/橋本葵(かんなちゃん)_icon.png" alt="" class="image">
-                        </div>
-                        <p class="text">橋本葵(かんなちゃん)</p>
-                    </div>
-                    <div class="member-card">
-                        <div class="card-image">
-                            <img src="./images/members/Join us_icon.png" alt="" class="image">
-                        </div>
-                        <p class="text">Join us!</p>
-                    </div>
-                    <div class="member-card">
-                        <div class="card-image">
-                            <img src="./images/members/Join us_icon.png" alt="" class="image">
-                        </div>
-                        <p class="text">Join us!</p>
-                    </div>
-                </div>
-                <p class="s-member-text_right">
-                    <a href="./members.html" class="text">
-                        →more...
-                    </a>
-                </p>
-            </div>
-        </section>
-            <!--Gallery-->
-            <h2 class="s-heading_underline heading">Gallery</h2>
-            </div>
-            <!--Galleryの写真→固定-->
-            <div class="flex-container">
-                <img src="./images/Top_Gallery1.jpg" class="image-wrap">
-                <img src="./images/Top_Gallery2.jpg" class="image-wrap">
-                <img src="./images/Top_Gallery3.jpg" class="image-wrap">
-            </div>
-            <!--sm版のときだけ出現-->
-            <div class="gallery_sp">
-                <!--back-->
-                <button value="戻る" onclick="go_back()" class="button_gallery_left"><img src="./images/material-symbols_arrow-back-ios-new.png" class="arrow_left"></button>
-                <!--image-->
-                    <img id="mypic" src="./images/Top_Gallery1.jpg" width="400" height="300">
-                <!--next-->
-                <button value="進む" onclick="go_forward()" class="button_gallery_right"><img src="./images/material-symbols_arrow-back-ios-new.png" class="arrow_right"></button>
-            </div>
-            <!--→more-->
-            <div class="s-gallery-text-right">
-                <a href="./gallery/top.html" class="text">
-                    →more...
-                </a>
-            </div>
-            <div class="note_contact_link">
-                <!--note-->
-                <section class="note_contact_link">
-                    <a href="https://note.com/itlmagic/"><img src="./images/note_logo.png" class="note_logo"></a>
-                </section>
-                <!--contact-->
-                <section class="note_contact_link">
-                    <a href="contact.html"><h2>Contact</h2></a>
-                </section>
-                <!--link-->
-                <section class="note_contact_link">
-                    <a href="link.html"> <h2>Link</h2></a>
-                </section>
-            </div>
-        </div>
-        <section class="s-twitter">
-            <h2 class="s-heading_underline heading">Twitter</h2>
-            <!--Twitterの長さ調整済み20230607-->
-            <div class="twitter-container">
-                <a class="twitter-timeline" data-height="600" data-width="100%" href="https://twitter.com/iTL57989039?ref_src=twsrc%5Etfw">Tweets by iTL57989039</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="yellow-line line-between"></div>
-        <div class="red-line"></div>
-        <p class="copyright-text text">&copy;2023 iTL Magic Circle : ALL rights reserved.</p>
-    </footer>
+
+    <div class="error-container">
+        <div class="error-code">404</div>
+        
+        <h1 class="error-title">ページが見つかりません</h1>
+        <p class="error-message">
+            お探しのページは、移動または削除されたか、<br>
+            URLが間違っている可能性があります。
+        </p>
+        
+        <a href="/" class="btn-home">トップページへ戻る</a>
+    </div>
+
 </body>
 </html>
